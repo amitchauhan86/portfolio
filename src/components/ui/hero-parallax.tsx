@@ -120,34 +120,34 @@ export const Header = () => {
     {
       id: 2,
       name: "HTML-5",
-      designation: "Product Manager",
+      designation: "Web Designer",
       image:html_icon
        },
     {
       id: 3,
       name: "CSS-3",
-      designation: "Data Scientist",
+      designation: "Web Designer",
       image:css_icon,
         // "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
     {
       id: 4,
       name: "Node Js",
-      designation: "UX Designer",
+      designation: "Software Engineer",
       image:node_icn,
         // "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
     {
       id: 5,
       name: "Java Script",
-      designation: "Soap Developer",
+      designation: "Software Engineer",
       image: js_icon,
         // "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
     },
     {
       id: 6,
       name: "Mongo DB",
-      designation: "The Explorer",
+      designation: "Software Engineer",
       image:mongodb_icon,
         // "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
     },
@@ -214,16 +214,16 @@ export const Header = () => {
         }}
         animate={{
           opacity: 1,
-          y: [20, -5, 0],
+          y: [60, -10, 0],
         }}
         transition={{
-          duration: 0.5,
+          duration: 0.9,
           ease: [0.4, 0.0, 0.2, 1],
         }}
         className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug   "
       >
-        <Highlight className="text-black dark:text-white">
-           Hi, I’m yy – yy y Developer
+        <Highlight className="text-black dark:text-white to-purple-600 from-indigo-500">
+           Hi, I’m Test – MERN Stack Developer
           {/* Hi, I’m Amit Chauhan – MERN Stack Developer */}
         </Highlight>
       </motion.h1>
