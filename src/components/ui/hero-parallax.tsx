@@ -16,7 +16,9 @@ import html_icon from "../../app/asset/html-icon.png";
 import css_icon from "../../app/asset/css3-icon.webp";
 import node_icn from "../../app/asset/node-icon.png";
 import js_icon from "../../app/asset/js-icon.png"
-import mongodb_icon from "../../app/asset/mongodb-icon.png"
+import mongodb_icon from "../../app/asset/mongodb-icon.png";
+import {IconCloud} from "../../magicui/IconCloud";
+
 export const HeroParallax = ({
   products,
 }: {
@@ -61,6 +63,7 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+  
   return (
     <div
       ref={ref}
@@ -76,7 +79,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="backcard flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -109,6 +112,38 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
+  const slugs = [ 
+    "typescript",
+    "javascript",
+    "dart",
+    "java",
+    "react",
+    "flutter",
+    "android",
+    "html5",
+    "css3",
+    "nodedotjs",
+    "express",
+    "nextdotjs",
+    "prisma",
+    "amazonaws",
+    "postgresql",
+    "firebase",
+    "nginx",
+    "vercel",
+    "testinglibrary",
+    "jest",
+    "cypress",
+    "docker",
+    "git",
+    "jira",
+    "github",
+    "gitlab",
+    "visualstudiocode",
+    "androidstudio",
+    "sonarqube",
+    "figma",
+  ];
   const people = [
     {
       id: 1, 
@@ -154,57 +189,15 @@ export const Header = () => {
   ];
 
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl relative flex mx-auto md:py-40 px-4 w-full  left-0 top-0 ">
+      <div >
+
+     
       <div className="flex flex-row">
         <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
         Welcome to <br /> My World of Code
         </h1>
-        <div className="card">
-          {/* <CardContainer className="inter-var">
-      <CardBody className=" bg-gray-50 absolute group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white"
-        >
-          Make things float in air
-        </CardItem>
-        <CardItem
-          as="p"
-          translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-        >
-          Hover over this card to unleash the power of CSS perspective
-        </CardItem>
-        <CardItem translateZ="100" className="w-full mt-4">
-          <Image
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
-        </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            as={Link}
-            href="https://twitter.com/mannupaaji"
-            target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-          >
-            Try now →
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Sign up
-          </CardItem>
-        </div>
-      </CardBody>
-    </CardContainer> */}
-        </div>
+ 
       </div>
       <h5 className="text-2xl md:text-1xl font-bold dark:text-neutral"></h5>
       <motion.h1
@@ -222,9 +215,8 @@ export const Header = () => {
         }}
         className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug   "
       >
-        <Highlight className="text-black dark:text-white to-purple-600 from-indigo-500">
-           Hi, I’m Test – MERN Stack Developer
-          {/* Hi, I’m Amit Chauhan – MERN Stack Developer */}
+        <Highlight className="text-black dark:text-white to-purple-600 from-indigo-400">
+           Hi, I’m Amit – MERN Stack Developer
         </Highlight>
       </motion.h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
@@ -234,6 +226,10 @@ export const Header = () => {
       </p>
       <div className="flex flex-row items-center mb-10 w-full mt-5">
         <AnimatedTooltip items={people} />
+      </div>
+      </div>
+      <div>
+      <IconCloud iconSlugs={slugs} />
       </div>
     </div>
   );
@@ -259,7 +255,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-96 w-[30rem] relative flex-shrink-0 tranform_add"
     >
       <Link
         href={product.link}

@@ -1,18 +1,21 @@
 "use client";
 
-import React,{useState} from "react";
-import "../app/style/homestyle.css"
+import React, { useState } from "react";
+import "../app/style/homestyle.css";
 import { MacbookScroll } from "../components/ui/macbook-scroll";
 import Link from "next/link";
 import NavbarDemo from "@/components/example/navbar-menu-demo";
-import getar from "../app/asset/science.png";
+import getar from "../app/asset/git.png";
+import fullstack from "../app/asset/fullstack.png";
+
 import HeroParallaxDemo from "@/components/example/hero-parallax-demo";
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
-
-
-export default function Home() {
-
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+ 
+export default function Home() { 
+ 
+  
   const data = [
     {
       title: "2024",
@@ -157,31 +160,83 @@ export default function Home() {
       ),
     },
   ];
-  
+
   return (
-     <div>
+    <div>
       <NavbarDemo />
       <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full leptop">
-      <HeroParallaxDemo />
+        <HeroParallaxDemo />
+        <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background px-20 pb-20 pt-8 ">
+      
+    </div>
+        <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
+          <MacbookScroll
+            title={
+              <span>
+                This Macbook is built with Tailwindcss. <br /> No kidding.
+              </span>
+            }
+            badge={
+              <Link href="https://peerlist.io/manuarora">
+                <Badge className="h-10 w-10 transform -rotate-12" />
+              </Link>
+            }
+            src={getar}
+            showGradient={false}
+          />
+        </div>
+      </div>
       <div className="w-full">
-      <Timeline data={data} />
+        <Timeline data={data} />
+      </div>
+
+      {/* <CardContainer className="inter-var">
+        <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+          <CardItem
+            translateZ="50"
+            className="text-xl font-bold text-neutral-600 dark:text-white"
+          >
+            Amit Chauhan full stack developer
+          </CardItem>
+          <CardItem
+            as="p"
+            translateZ="60"
+            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          >
+            As a Full-Stack Developer, I build scalable, responsive web
+            applications using modern frontend and backend technologies,
+            ensuring seamless functionality.
+          </CardItem>
+          <CardItem translateZ="100" className="w-full mt-4">
+            <Image
+              src={fullstack}
+              height="1000"
+              width="1000"
+              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+              alt="thumbnail"
+            />
+          </CardItem>
+          <div className="flex justify-between items-center mt-20">
+            <CardItem
+              translateZ={20}
+              as={Link}
+              href="https://twitter.com/mannupaaji"
+              target="__blank"
+              className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            >
+              Try now →
+            </CardItem>
+            <CardItem
+              translateZ={20}
+              as="button"
+              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+            >
+              Github
+            </CardItem>
+          </div>
+        </CardBody>
+      </CardContainer> */}
     </div>
-      <MacbookScroll
-        title={
-          <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
-          </span>
-        }
-        badge={
-          <Link href="https://peerlist.io/manuarora">
-            <Badge className="h-10 w-10 transform -rotate-12" />
-          </Link>
-        }
-        src={getar}
-        showGradient={false}
-      />
-    </div>
-     </div>
   );
 }
 // Peerlist logo
@@ -226,5 +281,3 @@ const Badge = ({ className }: { className?: string }) => {
     </svg>
   );
 };
-
-

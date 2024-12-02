@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["aceternity.com", "images.unsplash.com", "assets.aceternity.com","upload.wikimedia.org"], // Add your domain here
+    domains: ["aceternity.com", "images.unsplash.com", "assets.aceternity.com","upload.wikimedia.org", "peerlist.io"], // Add your domain here
   },
 };
 

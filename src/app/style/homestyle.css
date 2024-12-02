@@ -25,3 +25,35 @@ nav {
 nav p {
   color: #f1f1f1 !important;
 }
+.backcard{
+  /* margin-right: 36rem !important; */
+  border: none;
+  justify-content: center;
+  display: none;
+}
+.tranform_add{
+  transform: translateX(0px) !important;
+}
+.tranform_add {
+  height: 243px;
+  width: 20%;
+} 
+.scroll_leptop{
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #1c3e50,
+    #1c1c1c
+  );
+}
+.image_prot{
+  top: 140px; 
+}
+.leptop-sec {
+  background: linear-gradient(to bottom, #19242a, #1c1c1c);
+}
+.addback{
+  background: linear-gradient(to bottom, #4c4747, #1c1c1c) !important
+}img.h-60.w-full.object-cover.rounded-xl.group-hover\/card\:shadow-xl {
+  background: linear-gradient(to bottom, #8f789d, #1c1c1c) !important;
+}
