@@ -1,17 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React, from "react";
 import "../app/style/homestyle.css";
 import { MacbookScroll } from "../components/ui/macbook-scroll";
 import Link from "next/link";
 import NavbarDemo from "@/components/example/navbar-menu-demo";
 import getar from "../app/asset/git.png";
-import fullstack from "../app/asset/fullstack.png";
 
 import HeroParallaxDemo from "@/components/example/hero-parallax-demo";
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
  
 export default function Home() { 
  

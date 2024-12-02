@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 
 export function NavbarDemo() {
   const [isDay, setIsDay] = useState(true); // State to toggle between day and night
-  const toggleMode = () => setIsDay(!isDay);
   return (
     <div className="relative w-full flex items-center justify-center">
       <Navbar className="top-2" />
@@ -79,9 +78,9 @@ function Navbar({ className }) {
           </div>
         </MenuItem>
 
-        <button className="toggle-btn" onClick={toggleMode}>
+        {/* <button className="toggle-btn" onClick={toggleMode}>
         Switch to {isDay ? "Night" : "Day"} Mode
-      </button>
+      </button> */}
       </Menu>
     </div>
   );
